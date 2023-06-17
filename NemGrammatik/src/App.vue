@@ -1,19 +1,19 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import MainSection from './components/MainSection.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <!-- <div>
+      <HelloWorld msg="You did <br /> it!" />
+    </div> -->
   </header>
 
   <main>
-    <TheWelcome />
+    <MainSection/>
   </main>
 </template>
 
@@ -27,21 +27,19 @@ header {
   margin: 0 auto 2rem;
 }
 
+
+
 @media (min-width: 1024px) {
   header {
+    place-content: center;
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    padding-bottom: 2em;
   }
 
   .logo {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 }
 </style>
